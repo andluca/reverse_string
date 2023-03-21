@@ -8,12 +8,15 @@ const reverseString = () => {
 
   while (leftIndex < rightIndex) {
     
-    console.log(leftIndex)
-    console.log(rightIndex)
+    temporaryIndex = splitedString[leftIndex]
+    splitedString[leftIndex] = splitedString[rightIndex]
+    splitedString[rightIndex] = temporaryIndex
     rightIndex -=1;
     leftIndex +=1;
   }
   
+  var reverseString = splitedString.join('')
+  alert(reverseString)
    
 };
 
